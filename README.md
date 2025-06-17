@@ -1,1 +1,1 @@
-# solelux
+# soleluxe
