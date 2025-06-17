@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleLuxe-Kids' Shoes</title>
+<link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+    }
+    nav {
+      background-color: #000000 !important;
+    }
+    nav .navbar-brand,
+    nav .nav-link {
+      color: rgb(221, 208, 134) !important;
+      font-weight: 500;
+    }
+    nav .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .categories {
+      padding: 3rem 1rem;
+    }
+    .categories h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .card {
+      display: flexbox;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      height: auto; /* مناسب لحجم الصورة + النص */
+      display: flex;
+       overflow: visible;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .carousel-inner img {
+      height: auto;
+      max-width: 100%;
+      object-fit: contain; /* يظهر الصورة كاملة بدون قص */
+    }
+    .card p {
+  margin: 0;
+  word-wrap: break-word; /* يضمن ان النص لا يخرج من حدود الكارد */
+}
+    .card-body {
+      padding: 1rem;
+    }
+    .card-body button {
+      margin: 0 5px;
+    }
+    footer {
+      background-color: #000;
+      color: rgb(221, 208, 134);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    .filter {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .filter h4 {
+      margin-bottom: 1rem;
+    }
+  .title {
+  display: flex;
+  align-items: center;          
+  justify-content: center;      
+  gap: 10px;                    
+  margin: 0 auto;  
+  margin-bottom: 50px;             
+  width: fit-content;          
+}
+
+.title h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.title .high-heel {
+  height: 50px;                 
+  width: auto;
+  margin-bottom: 15PX;
+}
+  .equal-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .equal-height .card-body {
+    margin-top: auto;
+  }
+
+  .bestsellers .card {
+    min-height: 100%;
+  }
+
+
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">SoleLuxe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cart"><i class="bi bi-cart-fill"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#checkout">Checkout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <!-- Filter Sidebar -->
+      <div class="col-lg-3 mb-4">
+        <div class="filter">
+          <h4>Filter by</h4>
+          <div class="mb-3">
+            <label class="form-label">Price</label>
+            <select class="form-select">
+              <option value="">All</option>
+              <option value="₪300 - ₪500">₪300 - ₪500</option>
+              <option value="₪500 - ₪800">₪500 - ₪800</option>
+              <option value="₪800 - ₪1000">₪800 - ₪1000</option>
+              <option value="₪1000 - ₪2000">₪1000 - ₪2000</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Color</label>
+            <select class="form-select">
+              <option value="">All</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="Pink">Pink</option>
+              <option value="Beige">Beige</option>
+              <option value="Blue">Blue</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Brand</label>
+            <select class="form-select">
+              <option value="">All</option>
+            <option value="DOLCE & GABBANA">DOLCE & GABBANA</option>
+              <option value="FENDI">FENDI</option>
+              <option value="AGE OF INNOCENCE">AGE OF INNOCENCE</option>
+              <option value="ARUNA SETH">ARUNA SETH</option>
+              <option value="POM D'API">POM D'API</option>
+              <option value="SOPHIA WEBSTER">SOPHIA WEBSTER</option>
+              <option value="BURBERRY">BURBERRY</option>
+            <option value="GUCCI">GUCCI</option>
+              <option value="DONSJE">DONSJE</option>
+              <option value="VERSACE">VERSACE</option>
+              
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="col-lg-9">
+        <section class="categories" id="categories">
+         <div class="title" > <h2>kids's Shoes</h2><img src="assets/baby-shoes.png" class="high-heel"alt="high-heel"></div>
+         <div class="shop-links" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <!-- SHOP GIRL -->
+    <a href="shop-girl.html" style="text-decoration: none;">
+      <div style="text-align: center;">
+        <img src="assets/GIRL.jpg" alt="Shop Girl" style="width: 250px; border-radius: 10px;">
+        
+      </div>
+    </a>
+
+    <!-- SHOP BOY -->
+    <a href="shop-boy.html" style="text-decoration: none;">
+      <div style="text-align: center;">
+        <img src="assets/BOY.jpg" alt="Shop Boy" style="width: 250px; border-radius: 10px;">
+        
+      </div>
+    </a>
+
+    <!-- SHOP BABY -->
+    <a href="shop-baby.html" style="text-decoration: none;">
+      <div style="text-align: center;">
+        <img src="assets/PIC.jpg" alt="Shop Baby" style="width: 250px; border-radius: 10px;">
+        
+      </div>
+    </a>
+  </div>
+</div>
+          <div class="row g-4">
+
+           
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel1" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Exclusive Angelina Ballerina Flats1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Exclusive Angelina Ballerina Flats2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Exclusive Angelina Ballerina Flats3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Exclusive Angelina Ballerina Flats</h5>
+                  <p class="card-text">₪1,200</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel2" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Elin Glitter Ballet Flats1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Elin Glitter Ballet Flats2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Elin Glitter Ballet Flats3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Elin Glitter Ballet Flats</h5>
+                  <p class="card-text">₪475</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Check Sneakers in Cotton Canvas1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Check Sneakers in Cotton Canvas2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Check Sneakers in Cotton Canvas3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Check Sneakers in Cotton Canvas</h5>
+                  <p class="card-text">₪1,480</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel4" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Logo Ballet Flats in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Ballet Flats in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Ballet Flats in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Logo Ballet Flats in Leather</h5>
+                  <p class="card-text">₪1,000 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel5" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Blinc Bear Shoes in Metallic Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Blinc Bear Shoes in Metallic Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Blinc Bear Shoes in Metallic Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel5" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel5" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Blinc Bear Shoes in Metallic Leather</h5>
+                  <p class="card-text">₪300 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel6" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Cut-out Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Cut-out Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Cut-out Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel6" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel6" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Cut-out Sandals in Leather</h5>
+                  <p class="card-text">₪425</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel7" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/First Steps Sneakers in Mesh & Suede1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/First Steps Sneakers in Mesh & Suede2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/First Steps Sneakers in Mesh & Suede3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel7" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel7" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">First Steps Sneakers in Mesh & Suede</h5>
+                  <p class="card-text">₪1,100   </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel8" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric B1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric B2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric B3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel8" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel8" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Lace-up Sneakers in Technical Fabric B</h5>
+                  <p class="card-text">₪1,900</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel9" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Baby Logo Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Baby Logo Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Baby Logo Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel9" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel9" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Baby Logo Sneakers in Leather</h5>
+                  <p class="card-text">₪1,200</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel10" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Fleur Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Fleur Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Fleur Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel10" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel10" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Fleur Sandals in Leather</h5>
+                  <p class="card-text">₪500</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel11" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Exclusive Angelina Ballerina Flats WHITE1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/217860026_wht_cuExclusive Angelina Ballerina Flats W2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Exclusive Angelina Ballerina FlatsW3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel11" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel11" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Exclusive Angelina Ballerina Flats WHITE</h5>
+                  <p class="card-text">₪1,100</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel12" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/FF Logo Velcro Sneakers1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/FF Logo Velcro Sneakers2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/FF Logo Velcro Sneakers3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel12" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel12" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">FF Logo Velcro Sneakers</h5>
+                  <p class="card-text">₪1,590 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 13 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel13" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Ace Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Ace Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Ace Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel13" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel13" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ace Sneakers in Leather</h5>
+                  <p class="card-text">₪1,700</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 14 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel14" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Floral-print Ballet Flats in Nappa1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Floral-print Ballet Flats in Nappa2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Floral-print Ballet Flats in Nappa3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel14" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel14" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Floral-print Ballet Flats in Nappa</h5>
+                  <p class="card-text">₪1,350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 15 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel15" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/La Medusa Sneakers in Lambskin Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/La Medusa Sneakers in Lambskin Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/La Medusa Sneakers in Lambskin Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel15" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel15" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">La Medusa Sneakers in Lambskin Leather</h5>
+                  <p class="card-text">₪1,150</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 16 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel16" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Mark Check Sneakers in Cotton & Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Mark Check Sneakers in Cotton & Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Mark Check Sneakers in Cotton & Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel16" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel16" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Mark Check Sneakers in Cotton & Leather</h5>
+                  <p class="card-text">₪1,300</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 17 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel17" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Noah Lace Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Noah Lace Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Noah Lace Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel17" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel17" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Noah Lace Sneakers in Leather</h5>
+                  <p class="card-text">₪1,650</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 18 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel18" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Jenny Ballerinas in Patent Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Jenny Ballerinas in Patent Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Jenny Ballerinas in Patent Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel18" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel18" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Jenny Ballerinas in Patent Leather</h5>
+                  <p class="card-text">₪550</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 19 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel19" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Mary Sandals in Patent Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Mary Sandals in Patent Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Mary Sandals in Patent Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel19" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel19" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Mary Sandals in Patent Leather</h5>
+                  <p class="card-text">₪425</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 20 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel20" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Lace-up Sneakers in Technical Fabric3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel20" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel20" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Lace-up Sneakers in Technical Fabric</h5>
+                  <p class="card-text">₪2,000</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 21 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel21" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Logo Velcro Strap Sandals1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Velcro Strap Sandals2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Velcro Strap Sandals3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel21" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel21" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Logo Velcro Strap Sandals</h5>
+                  <p class="card-text">₪1,350 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 22 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel22" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Low-top Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Low-top Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Low-top Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel22" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel22" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Low-top Sneakers in Leather</h5>
+                  <p class="card-text">₪1,000 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 23 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel23" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Monogram Allover Print Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Monogram Allover Print Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Monogram Allover Print Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel23" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel23" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Monogram Allover Print Sneakers in Leather</h5>
+                  <p class="card-text">₪1,350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 24 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel24" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Noah Velcro Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Noah Velcro Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Noah Velcro Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel24" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel24" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Noah Velcro Sneakers in Leather</h5>
+                  <p class="card-text">₪1,350 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 25 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel25" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/FF Jacquard Sandals in Jacquard1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/FF Jacquard Sandals in Jacquard2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/FF Jacquard Sandals in Jacquard3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel25" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel25" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">FF Jacquard Sandals in Jacquard</h5>
+                  <p class="card-text">₪2,000</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 26 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel26" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Logo Band Sneakers in Mesh1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Band Sneakers in Mesh2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Logo Band Sneakers in Mesh3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel26" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel26" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Logo Band Sneakers in Mesh</h5>
+                  <p class="card-text">₪2,600</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 27 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel27" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Monogram Sneakers in Leather & Jacquard1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Monogram Sneakers in Leather & Jacquard2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Monogram Sneakers in Leather & Jacquard3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel27" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel27" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Monogram Sneakers in Leather & Jacquard</h5>
+                  <p class="card-text">₪2,000</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 28 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel28" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Blinc Unicorn Shoes in Metallic Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Blinc Unicorn Shoes in Metallic Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Blinc Unicorn Shoes in Metallic Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel28" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel28" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Blinc Unicorn Shoes in Metallic Leather</h5>
+                  <p class="card-text">₪300</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 29 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel29" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Meesie Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Meesie Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Meesie Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel29" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel29" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Meesie Sneakers in Leather</h5>
+                  <p class="card-text">₪350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 30 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel30" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Odette Ballet Flats1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Odette Ballet Flats2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Odette Ballet Flats3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel30" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel30" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Odette Ballet Flats</h5>
+                  <p class="card-text">₪850</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 31 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel31" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Plagette Daisy Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Daisy Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Daisy Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel31" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel31" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Plagette Daisy Sandals in Leather</h5>
+                  <p class="card-text">₪450</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 32 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel32" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Gianni Ribbon Ballet Flats in Metallic Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Gianni Ribbon Ballet Flats in Metallic Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Gianni Ribbon Ballet Flats in Metallic Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel32" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel32" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gianni Ribbon Ballet Flats in Metallic Leather</h5>
+                  <p class="card-text">₪1,100</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 33 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel33" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Tuti Sky Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Tuti Sky Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Tuti Sky Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel33" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel33" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tuti Sky Sandals in Leather</h5>
+                  <p class="card-text">₪350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 34 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel34" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/GG Sneakers in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/GG Sneakers in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/GG Sneakers in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel34" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel34" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">GG Sneakers in Leather</h5>
+                  <p class="card-text">₪2,200 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 35 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel35" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Plagette Fire Sandals in Metallic Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Fire Sandals in Metallic Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Fire Sandals in Metallic Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel35" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel35" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Plagette Fire Sandals in Metallic Leather</h5>
+                  <p class="card-text">₪450</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 36 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel36" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Violette Tuti Fields Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Violette Tuti Fields Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Violette Tuti Fields Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel36" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel36" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Violette Tuti Fields Sandals in Leather</h5>
+                  <p class="card-text">₪350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 37 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel37" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Slip-on Sneakers in GG Canvas1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Slip-on Sneakers in GG Canvas2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Slip-on Sneakers in GG Canvas3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel37" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel37" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Slip-on Sneakers in GG Canvas</h5>
+                  <p class="card-text">₪1,550 </p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 38 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel38" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Plagette Floral Sandals in Leather1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Floral Sandals in Leather2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Plagette Floral Sandals in Leather3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel38" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel38" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Plagette Floral Sandals in Leather</h5>
+                  <p class="card-text">₪450</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 39 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel39" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Chiara Butterfly Sandals1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Chiara Butterfly Sandals2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Chiara Butterfly Sandals3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel39" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel39" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Chiara Butterfly Sandals</h5>
+                  <p class="card-text">₪1,200</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+                   <!-- Card 40 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel40" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Toddler Ace Sneakers in Canvas1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Toddler Ace Sneakers in Canvas2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Toddler Ace Sneakers in Canvas3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel40" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel40" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Toddler Ace Sneakers in Canvas</h5>
+                  <p class="card-text">₪1,350</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+               <!-- Card 41 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel41" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Chiara Butterfly Sandals G1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Chiara Butterfly Sandals G2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Chiara Butterfly Sandals G3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel41" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel41" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Chiara Butterfly Sandals G</h5>
+                  <p class="card-text">₪1,100</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             <!-- Card 42 -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card equal-height">
+                <div id="productCarousel42" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/Celeste Butterfly Sandals1.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets//Celeste Butterfly Sandals2.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/Celeste Butterfly Sandals3.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel42" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel42" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Celeste Butterfly Sandals</h5>
+                  <p class="card-text">₪970</p>
+                  <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                  <button class="btn btn-outline-danger btn-sm"><i class="bi bi-heart"></i></button>
+                </div>
+              </div>
+            </div>
+             
+           
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+     &copy; 2025 SoleLuxe. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
