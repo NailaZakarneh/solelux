@@ -134,61 +134,9 @@
           </tr>
         </thead>
         <tbody id="cart-items">
-          <tr data-price="41.78">
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <img src="https://via.placeholder.com/70" alt="Product" class="product-img">
-                <div>
-                  <div><strong>HIKING RAIN PONCHO 50 - 10L</strong></div>
-                  <small>Color: Green-D | Size: XL</small>
-                </div>
-              </div>
-            </td>
-            <td>$41.78</td>
-            <td>
-              <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
-              <span class="mx-2">1</span>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </td>
-            <td class="item-total">$41.78</td>
-          </tr>
-          <tr data-price="41.78">
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <img src="https://via.placeholder.com/70" alt="Product" class="product-img">
-                <div>
-                  <div><strong>HIKING RAIN PONCHO 50 - 10L</strong></div>
-                  <small>Color: Green-D | Size: XL</small>
-                </div>
-              </div>
-            </td>
-            <td>$41.78</td>
-            <td>
-              <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
-              <span class="mx-2">2</span>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </td>
-            <td class="item-total">$83.56</td>
-          </tr>
-          <tr data-price="41.78">
-            <td>
-              <div class="d-flex align-items-center gap-3">
-                <img src="https://via.placeholder.com/70" alt="Product" class="product-img">
-                <div>
-                  <div><strong>BAG - 10L TURQUOISE</strong></div>
-                  <small>Color: Green-D | Size: XL</small>
-                </div>
-              </div>
-            </td>
-            <td>$41.78</td>
-            <td>
-              <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
-              <span class="mx-2">1</span>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </td>
-            <td class="item-total">$41.78</td>
-          </tr>
-        </tbody>
+  <!-- سيتم تعبئة المنتجات هنا تلقائياً -->
+</tbody>
+
       </table>
     </div>
 
@@ -209,31 +157,60 @@
 
   <!-- Scripts -->
   <script>
-    function updateQty(btn, change) {
-      const row = btn.closest("tr");
-      const qtySpan = btn.parentElement.querySelector("span");
-      let qty = parseInt(qtySpan.textContent);
-      qty = Math.max(1, qty + change);
-      qtySpan.textContent = qty;
+  function loadCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItemsContainer = document.getElementById("cart-items");
+    cartItemsContainer.innerHTML = "";
 
-      const price = parseFloat(row.dataset.price);
-      const totalCell = row.querySelector(".item-total");
-      totalCell.textContent = `$${(qty * price).toFixed(2)}`;
+    cart.forEach((item, index) => {
+      const row = document.createElement("tr");
+      row.dataset.price = item.price;
 
-      updateSubtotal();
-    }
+      row.innerHTML = `
+        <td>
+          <div class="d-flex align-items-center gap-3">
+            <img src="${item.image}" alt="Product" class="product-img">
+            <div>
+              <div><strong>${item.name}</strong></div>
+              <small>Size: XL | Color: Green</small>
+            </div>
+          </div>
+        </td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td>
+          <button class="qty-btn" onclick="updateQty(this, -1, ${index})">−</button>
+          <span class="mx-2">${item.qty}</span>
+          <button class="qty-btn" onclick="updateQty(this, 1, ${index})">+</button>
+        </td>
+        <td class="item-total">$${(item.price * item.qty).toFixed(2)}</td>
+      `;
 
-    function updateSubtotal() {
-      let subtotal = 0;
-      document.querySelectorAll("#cart-items tr").forEach(row => {
-        const totalCell = row.querySelector(".item-total").textContent;
-        subtotal += parseFloat(totalCell.replace("$", ""));
-      });
-      document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
-    }
+      cartItemsContainer.appendChild(row);
+    });
 
-    window.onload = updateSubtotal;
-  </script>
+    updateSubtotal();
+  }
+
+  function updateQty(btn, change, index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart[index].qty = Math.max(1, cart[index].qty + change);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
+
+  function updateSubtotal() {
+    let subtotal = 0;
+    document.querySelectorAll("#cart-items tr").forEach(row => {
+      const totalCell = row.querySelector(".item-total").textContent;
+      subtotal += parseFloat(totalCell.replace("$", ""));
+    });
+    document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+  }
+
+  window.onload = loadCart;
+</script>
+
 
 </body>
 </html>
+
